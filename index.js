@@ -50,24 +50,64 @@ if ("geolocation" in navigator) {
 
 // logToServer();
 
+// Client-side JavaScript (browser)
+function getLocationAndSendToBackend() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const coordinates = {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
+        };
 
-fetch('/api/location', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(coordinates),
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-
-(error) => {
-  console.error('Error getting location:', error.message);
+        // Send coordinates to backend API
+        fetch('/api/location', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(coordinates),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+      },
+      (error) => {
+        console.error('Error getting location:', error.message);
+      }
+    );
+  } else {
+    console.error('Geolocation is not supported by this browser.');
+  }
 }
+
+// Call the function when needed (e.g., on page load or button click)
+getLocationAndSendToBackend();
+// Server-side JavaScript (Node.js/Express)
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.json());
+
+app.post('/api/location', (req, res) => {
+  const { latitude, longitude } = req.body;
+  
+  // Here you can store the coordinates in a database or process them
+  console.log('Received coordinates:', { latitude, longitude });
+  
+  res.json({
+    status: 'success',
+    message: 'Coordinates received',
+    data: {
+      latitude,
+      longitude
+    }
+  });
+});
 
 
