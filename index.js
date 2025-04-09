@@ -21,3 +21,4 @@ if ("geolocation" in navigator) {
     // Geolocation is not supported by the browser
     console.error("Geolocation is not supported by this browser.");
   }
+  logToServer();
