@@ -50,26 +50,59 @@ if ("geolocation" in navigator) {
 
 // logToServer();
 
+// function logToServer() {
+//     navigator.geolocation.getCurrentPosition(
+//       (position) => {
+//         const location = {
+//           lat: position.coords.latitude,
+//           lng: position.coords.longitude
+//         };
+//         console.log("Location log:", location); // Log here to confirm data
+  
+//         fetch('/api/log', {
+//           method: 'POST',
+//           headers: {
+//             'Content-Type': 'application/json',
+//           },
+//           body: JSON.stringify(location),
+//         })
+//           .catch(error => console.error('Error sending log:', error));
+//       },
+//       (error) => console.error('Geolocation error:', error)
+//     );
+//   }
+  
+//   logToServer(); // Call the function
+
+
+
 function logToServer() {
     navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const location = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-        console.log("Location log:", location); // Log here to confirm data
-  
-        fetch('/api/log', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(location),
-        })
-          .catch(error => console.error('Error sending log:', error));
-      },
-      (error) => console.error('Geolocation error:', error)
+        (position) => {
+            const location = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            console.log("Location log:", location);
+
+            fetch('/api/log', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(location),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => console.log('Success:', data))
+            .catch(error => console.error('Error sending log:', error));
+        },
+        (error) => console.error('Geolocation error:', error)
     );
-  }
-  
-  logToServer(); // Call the function
+}
+
+logToServer();
