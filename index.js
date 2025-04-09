@@ -14,7 +14,7 @@ function logToServer() {
         );
     }
 
-    console.log(location);
+    console.log("this is the location log", location);
 
     fetch('/api/log', {
         method: 'POST',
