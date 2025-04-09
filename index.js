@@ -22,87 +22,61 @@ if ("geolocation" in navigator) {
     console.error("Geolocation is not supported by this browser.");
   }
 
-//   function logToServer() {
 
-//     let location;
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(
-//         function (position) {
-//         location = {
-//             lat: position.coords.latitude,
-//             lng: position.coords.longitude
-//         };
-//         }    
-//         );
-//     }
+// function logToServer() {
+//     navigator.geolocation.getCurrentPosition(
+//         (position) => {
+//             const location = {
+//                 lat: position.coords.latitude,
+//                 lng: position.coords.longitude
+//             };
+//             console.log("Location log:", location);
 
-//     console.log("this is the location log", location);
-
-//     fetch('/api/log', {
-//         method: 'POST',
-//         headers: {
-//              'content-type': 'application/json',
+//             fetch('/api/log', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//                 body: JSON.stringify(location),
+//             })
+//             .then(response => {
+//                 if (!response.ok) {
+//                     throw new Error('Network response was not ok');
+//                 }
+//                 return response.json();
+//             })
+//             .then(data => console.log('Success:', data))
+//             .catch(error => console.error('Error sending log:', error));
 //         },
-//         body: JSON.stringify({ location }),
-//     })
-//     .catch(error => console.error('Error sending log to server:', error));
+//         (error) => console.error('Geolocation error:', error)
+//     );
 // }
 
 // logToServer();
 
-// function logToServer() {
-//     navigator.geolocation.getCurrentPosition(
-//       (position) => {
-//         const location = {
-//           lat: position.coords.latitude,
-//           lng: position.coords.longitude
-//         };
-//         console.log("Location log:", location); // Log here to confirm data
-  
-//         fetch('/api/log', {
-//           method: 'POST',
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//           body: JSON.stringify(location),
-//         })
-//           .catch(error => console.error('Error sending log:', error));
-//       },
-//       (error) => console.error('Geolocation error:', error)
-//     );
-//   }
-  
-//   logToServer(); // Call the function
-
-
-
 function logToServer() {
     navigator.geolocation.getCurrentPosition(
         (position) => {
-            const location = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-            console.log("Location log:", location);
+            // Validate coordinates are numbers
+            const lat = parseFloat(position.coords.latitude);
+            const lng = parseFloat(position.coords.longitude);
+
+            if (isNaN(lat) || isNaN(lng)) {
+                throw new Error(`Invalid coordinates: ${position.coords.latitude}, ${position.coords.longitude}`);
+            }
+
+            const location = { lat, lng };
+            console.log("Valid Location:", location); // Verify in console
 
             fetch('/api/log', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(location),
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(location)
             })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => console.log('Success:', data))
-            .catch(error => console.error('Error sending log:', error));
+            .then(response => response.json())
+            .then(data => console.log("API Response:", data))
+            .catch(error => console.error("Error:", error));
         },
-        (error) => console.error('Geolocation error:', error)
+        (error) => console.error("Geolocation Error:", error)
     );
 }
-
-logToServer();
