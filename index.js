@@ -10,5 +10,5 @@ function logToServer(message) {
     })
     .catch(error => console.error('Error sending log to server:', error));
 }
-
-logToServer('This will show in Vercel logs');
+const location = Intl.DateTimeFormat().resolvedOptions().timeZone;
+logToServer(location);
