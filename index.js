@@ -70,6 +70,4 @@ fetch('/api/location', {
   console.error('Error getting location:', error.message);
 }
 
- else {
-console.error('Geolocation is not supported by this browser.');
-}
+
