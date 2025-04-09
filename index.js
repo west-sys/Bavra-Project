@@ -1,14 +1,29 @@
-function logToServer(message) {
-    console.log(message);
+
+
+function logToServer() {
+
+    let location;
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+        function (position) {
+        location = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
+        }    
+        );
+    }
+
+    console.log(location);
 
     fetch('/api/log', {
         method: 'POST',
         headers: {
              'content-type': 'application/json',
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ location }),
     })
     .catch(error => console.error('Error sending log to server:', error));
 }
-const location = Intl.DateTimeFormat().resolvedOptions().timeZone;
-logToServer(location);
+
+logToServer();
