@@ -5,24 +5,13 @@ body{
     padding: 0px;
     height: 100vh;
     background-color: #000000;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 60px 1fr 1fr;
-    grid-template-areas: 
-    "containers containers containers"
-    "mains mains mains"
-    "footers footers footers"
-    ;
 }
  /* this is a logo and flag section */
-.containers{
-    grid-area: containers;
+.nav_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    position: fixed;
-    width: 100%;
     backdrop-filter: blur(10px);
 }
 .bavra_logo {
@@ -32,7 +21,6 @@ body{
    margin-left: 14px;
    height: 45px;
    width: 140px;
-   position: absolute;
 }
 #logo {
    width: 16px;
@@ -46,17 +34,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  margin-left: 100px;
-  position: fixed;
-  left: 350px;
 }
-.navbar ul li{
-    display: inline-block;
-    list-style-type: none;
-    position: relative;
-    padding: 10px;
-    transition: 0.3s;
+.navbar ul {
+    display: flex;
+}
+.navbar ul li {
+  padding: 10px;
+  list-style-type: none;
 }
 .navbar ul li a{
     font-family: 'Montserrat', sans-serif;
@@ -80,15 +64,20 @@ body{
   }
 }
  
-/* this is the buy button */
+/* this is the navigation bar button */
 .nav_button {
-  width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 40px;
-  /* margin-right: 23px; */
+  width: 260px;
+  margin-right: 10px;
+  overflow: hidden;
 }
 .buy {
   width: 130px;
   height: 35px;
+  border: none;
   border-radius: 7px; 
   background-color: #0d2cdb;
   text-align: center;
@@ -106,7 +95,7 @@ body{
 /* this is the sign up button */
 .sign {
   width: 125px;
-  height: 34px;
+  height: 35px;
   background-color:rgb(0, 0, 0);
   border-radius: 7px;
   border: 1px solid #242424;
@@ -131,8 +120,36 @@ body{
     display: none;
   }
 }
+[poptoggle]{
+  position: fixed;
+  right: -50px;
+  width: 35px;
+  height: 35px;
+  writing-mode: vertical-lr;
+  font-size: 1.3rem;
+  color: white;
+  background: transparent;
+  border: 1px solid #2c2c2c;
+  border-radius: 5px;
+  padding-left: 2px;
+}
+@media (max-width: 500px) {
+  [poptoggle]{
+    position: fixed;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    writing-mode: vertical-lr;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: 1px solid #2c2c2c;
+    border-radius: 5px;
+    padding-left: 2px;
+  }
+}
+
 .mains{
-    grid-area: mains;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-top: 1px solid rgb(41, 41, 41);
@@ -151,13 +168,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 900px;
+    /* width: 900px; */
     height: 300px;
     background: radial-gradient(rgba(0, 0, 255, 0.596), black 55%);
 }
 .Layer_3 {
     border-radius: 50%;
-    width: 200px;
+    /* width: 200px; */
 }
 .line {
     background-color: rgba(20, 20, 20, 0.50);
@@ -212,14 +229,12 @@ body{
 }
 /* this is an anitmated main header section */
 .text-sec {
-    width: 900px;
     height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
 }
-
 #seam {
     color: rgb(200, 200, 200);
     font-size: 50px;
@@ -239,6 +254,17 @@ body{
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     margin-left: 10px;
+}
+#glob {
+  display: block;
+  height: 50px;
+  margin-top: 10px;
+}
+.glob1 {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
 }
 
   .wrapperi{
@@ -348,18 +374,6 @@ body{
     100%{
       left: 0;
     }
-  }
-
-  #glob {
-    display: block;
-    height: 50px;
-    margin-top: 10px;
-  }
-  .glob1 {
-    color: white;
-    font-size: 15px;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
   }
 
 /* this is an animated scrollable wallet section */
@@ -508,7 +522,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 300px;
   /* border: 1px solid yellow; */
 }
@@ -640,7 +653,6 @@ body{
 
 /* A Footer Section */
   .footers {
-    grid-area: footers;
     border-top: 1px solid rgb(12, 12, 12);
     display: block;
   }
