@@ -153,8 +153,8 @@ body{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-top: 1px solid rgb(41, 41, 41);
-    border-left: 1px solid whitrgb(41, 41, 41);
-    border-right: 1px solid whitrgb(41, 41, 41);
+    border-left: 1px solid  rgb(41, 41, 41);
+    border-right: 1px solid rgb(41, 41, 41);
 }
 /* this is a content1 one which contain left sliding wallets logo */
 .content1 {
@@ -168,13 +168,26 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 900px; */
     height: 300px;
     background: radial-gradient(rgba(0, 0, 255, 0.596), black 55%);
+    border: 1px solid white;
 }
 .Layer_3 {
-    border-radius: 50%;
-    /* width: 200px; */
+    border-radius: 5%;
+}
+@media (max-width: 600px) {
+  .ball-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 400px;
+    background: radial-gradient(rgba(0, 0, 255, 0.596), black 55%);
+    border: 1px solid white;
+}
+  .Layer_3{
+    width: 150px;
+  }
 }
 .line {
     background-color: rgba(20, 20, 20, 0.50);
@@ -266,7 +279,34 @@ body{
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
 }
-
+@media (max-width: 500px) {
+  #seam {
+    color: rgb(200, 200, 200);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+  }
+    #on {
+      color: rgb(200, 200, 200);
+      font-size: 30px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      margin-left: 20px;
+    }
+    #too {
+      color: rgb(200, 200, 200);
+      font-size: 30px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      margin-left: 10px;
+  }
+  .glob1 {
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
   .wrapperi{
     display: flex;
   }
@@ -375,6 +415,26 @@ body{
       left: 0;
     }
   }
+@media (max-width: 500px){
+  .dynamic-txts li{
+    list-style: none;
+    color: #c6b300;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+  }
+  .dynamic-txtse li{
+    list-style: none;
+    color: #0d2cdb;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    animation: slider 12s steps(4) infinite;
+  }
+}
 
 /* this is an animated scrollable wallet section */
 .wrapper {
