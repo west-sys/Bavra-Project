@@ -268,6 +268,7 @@ body{
   .content1{
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
   }
   .ball-sec {
     display: flex;
