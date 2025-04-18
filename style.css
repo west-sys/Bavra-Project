@@ -133,6 +133,20 @@ body{
   border-radius: 5px;
   padding-left: 2px;
 }
+#mypopover {
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid #2c2c2c;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+}
+#mypopover li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
+}
 @media (max-width: 600px) {
   [poptoggle]{
     position: fixed;
