@@ -162,35 +162,23 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 .ball-sec {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 300px;
+    width: 800px;
     background: radial-gradient(rgba(0, 0, 255, 0.596), black 55%);
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    overflow: hidden;
 }
 .Layer_3 {
-    border-radius: 5%;
-}
-@media (max-width: 600px) {
-  .ball-sec {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    width: 400px;
-    background: radial-gradient(rgba(0, 0, 255, 0.596), black 55%);
-    border: 1px solid white;
-}
-  .Layer_3{
-    width: 150px;
-  }
+    border-radius: 100%;
+    width: 300px;
 }
 .line {
-    background-color: rgba(20, 20, 20, 0.50);
     width: 300px;
     height: 1.5px;
     overflow: hidden;
@@ -216,7 +204,6 @@ body{
 }
 
 .line1 {
-    background-color: rgba(20, 20, 20, 0.50);
     width: 300px;
     height: 1.5px;
     overflow: hidden;
@@ -240,13 +227,31 @@ body{
         left: 300px;
     }
 }
+
+@media (max-width: 600px) {
+  .ball-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 400px;
+    background: radial-gradient(rgba(0, 0, 255, 0.596), black 55%);
+    /* border: 1px solid white; */
+    overflow: hidden;
+}
+  .Layer_3{
+    border-radius: 100%;
+    width: 200px;
+  }
+}
 /* this is an anitmated main header section */
 .text-sec {
     height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 80px;
+    /* border: 1px solid white; */
 }
 #seam {
     color: rgb(200, 200, 200);
@@ -279,33 +284,11 @@ body{
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
 }
-@media (max-width: 500px) {
-  #seam {
-    color: rgb(200, 200, 200);
-    font-size: 30px;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-  }
-    #on {
-      color: rgb(200, 200, 200);
-      font-size: 30px;
-      font-weight: 600;
-      font-family: 'Montserrat', sans-serif;
-      margin-left: 20px;
-    }
-    #too {
-      color: rgb(200, 200, 200);
-      font-size: 30px;
-      font-weight: 600;
-      font-family: 'Montserrat', sans-serif;
-      margin-left: 10px;
-  }
-  .glob1 {
-    color: white;
-    font-size: 10px;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-  }
+[crypto_to_fiat]{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
 }
   .wrapperi{
     display: flex;
@@ -415,26 +398,69 @@ body{
       left: 0;
     }
   }
-@media (max-width: 500px){
-  .dynamic-txts li{
-    list-style: none;
-    color: #c6b300;
-    font-size: 25px;
-    font-weight: bold;
-    position: relative;
-    top: 0;
-    animation: slide 12s steps(4) infinite;
+  @media (max-width: 500px) {
+    .text-sec {
+      height: 150px;
+      width: 200px;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid white; */
   }
-  .dynamic-txtse li{
-    list-style: none;
-    color: #0d2cdb;
-    font-size: 25px;
-    font-weight: bold;
-    position: relative;
-    top: 0;
-    animation: slider 12s steps(4) infinite;
+    [crypto_to_fiat]{
+      display: flex;
+      height: 40px;
+      width: 200px;
+      /* border: 1px solid rgb(17, 0, 255); */
+    }
+    #seam {
+      text-align: center;
+      color: rgb(200, 200, 200);
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+    }
+      #on {
+        text-align: center;
+        color: rgb(200, 200, 200);
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+      }
+      #too {
+        color: rgb(200, 200, 200);
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 10px;
+    }
+    .glob1 {
+      color: white;
+      font-size: 10px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .dynamic-txts li{
+      list-style: none;
+      color: #c6b300;
+      font-size: 20px;
+      font-weight: bold;
+      position: relative;
+      top: 0;
+      animation: slide 12s steps(4) infinite;
+    }
+    .dynamic-txtse li{
+      list-style: none;
+      color: #0d2cdb;
+      font-size: 20px;
+      font-weight: bold;
+      position: relative;
+      top: 0;
+      animation: slider 12s steps(4) infinite;
+    }
   }
-}
+
 
 /* this is an animated scrollable wallet section */
 .wrapper {
