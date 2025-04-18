@@ -162,7 +162,6 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* margin-top: 80px; */
 }
 .ball-sec {
     display: flex;
@@ -229,6 +228,10 @@ body{
 }
 
 @media (max-width: 600px) {
+  .content1{
+    display: flex;
+    flex-direction: column;
+  }
   .ball-sec {
     display: flex;
     align-items: center;
@@ -241,7 +244,7 @@ body{
 }
   .Layer_3{
     border-radius: 100%;
-    width: 200px;
+    width: 250px;
   }
 }
 /* this is an anitmated main header section */
@@ -405,34 +408,32 @@ body{
       display: block;
       justify-content: center;
       align-items: center;
-      /* border: 1px solid white; */
+      margin: auto;
   }
     [crypto_to_fiat]{
       display: flex;
       height: 40px;
       width: 200px;
-      /* border: 1px solid rgb(17, 0, 255); */
     }
     #seam {
       text-align: center;
       color: rgb(200, 200, 200);
-      font-size: 20px;
+      font-size: 25px;
       font-weight: 600;
       font-family: 'Montserrat', sans-serif;
     }
       #on {
         text-align: center;
         color: rgb(200, 200, 200);
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
         font-family: 'Montserrat', sans-serif;
       }
       #too {
         color: rgb(200, 200, 200);
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
         font-family: 'Montserrat', sans-serif;
-        margin-left: 10px;
     }
     .glob1 {
       color: white;
@@ -444,7 +445,7 @@ body{
     .dynamic-txts li{
       list-style: none;
       color: #c6b300;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       position: relative;
       top: 0;
@@ -453,11 +454,16 @@ body{
     .dynamic-txtse li{
       list-style: none;
       color: #0d2cdb;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       position: relative;
       top: 0;
       animation: slider 12s steps(4) infinite;
+    }
+    .glob1 {
+      color: rgb(66, 66, 66);
+      font-size: 10px;
+      text-align: center;
     }
   }
 
