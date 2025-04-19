@@ -71,6 +71,7 @@ body{
     width: 100%;
     backdrop-filter: blur(10px);
     position: fixed;
+    top: 0;
     z-index: 10;
 }
   .navbar{
@@ -268,6 +269,9 @@ body{
     }
 }
 @media (max-width: 600px) {
+  .mains {
+    margin-top: 62px;
+  }
   .content1{
     display: flex;
     flex-direction: column;
