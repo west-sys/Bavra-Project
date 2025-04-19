@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  --another: #345995;
+  --blue: #064789;
+  --yellow: #fdc100;
+}
 body{
     margin: 0px;
     padding: 0px;
     height: 100vh;
-    background-color: #000000;
+    background-color: black;
 }
  /* this is a logo and flag section */
 .nav_container{
@@ -452,7 +457,7 @@ body{
   }
   .dynamic-txtse li{
     list-style: none;
-    color: #0d2cdb;
+    color: var(--blue);
     font-size: 40px;
     font-weight: bold;
     position: relative;
@@ -546,7 +551,7 @@ body{
     }
     .dynamic-txtse li{
       list-style: none;
-      color: #0d2cdb;
+      color: var(--blue);
       font-size: 25px;
       font-weight: bold;
       position: relative;
@@ -772,7 +777,7 @@ body{
   height: 200px;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
-  background: linear-gradient(to left, blue, rgb(0, 0, 0));
+  background: linear-gradient(to left, var(--blue), rgb(0, 0, 0));
 }
 #arhead {
   color: white;
