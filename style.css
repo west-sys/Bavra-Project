@@ -743,6 +743,26 @@ body{
     width: 350px;
     margin: auto;
  }
+ [poptoggle]{
+  width: 35px;
+  height: 35px;
+  writing-mode: vertical-lr;
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+  background: transparent;
+  border-radius: 5px;
+  padding-left: 2px;
+  visibility: visible;
+}
+#mypopover {
+  margin: auto;
+  width: 330px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid #2c2c2c;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+}
   .phoneima {
     width: 330px;
     height: 500px;
