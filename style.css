@@ -66,6 +66,35 @@ body{
 .navbar ul li a:hover {
   color: yellow;
 }
+[poptoggle]{
+  position: fixed;
+  right: 0px;
+  bottom: -45px;
+  width: 35px;
+  height: 35px;
+  writing-mode: vertical-lr;
+  font-size: 1.3rem;
+  color: white;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  padding-left: 2px;
+  visibility: hidden;
+}
+#mypopover {
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid #2c2c2c;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+}
+#mypopover li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
+}
 @media (max-width: 600px) {
   .nav_container{
     display: flex;
@@ -77,6 +106,32 @@ body{
     position: fixed;
     top: 0;
     z-index: 10;
+}
+[poptoggle]{
+  position: fixed;
+  z-index: 20;
+  right: 15px;
+  bottom: 10px;
+  width: 35px;
+  height: 35px;
+  writing-mode: vertical-lr;
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+  background: transparent;
+  border-radius: 5px;
+  padding-left: 2px;
+  visibility: visible;
+}
+#mypopover {
+  position: absolute;
+  z-index: 20;
+  margin: auto;
+  width: 330px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid #2c2c2c;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
 }
   .navbar{
     display: none;
@@ -139,62 +194,8 @@ body{
     display: none;
   }
 }
-[poptoggle]{
-  position: fixed;
-  right: 0px;
-  bottom: -45px;
-  width: 35px;
-  height: 35px;
-  writing-mode: vertical-lr;
-  font-size: 1.3rem;
-  color: white;
-  background: transparent;
-  border: none;
-  border-radius: 5px;
-  padding-left: 2px;
-  visibility: hidden;
-}
-#mypopover {
-  width: 300px;
-  height: 400px;
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid #2c2c2c;
-  border-radius: 10px;
-  backdrop-filter: blur(15px);
-}
-#mypopover li a{
-  text-decoration: none;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 40px;
-}
-@media (max-width: 400px) {
-  [poptoggle]{
-    position: fixed;
-    right: 15px;
-    bottom: 10px;
-    width: 35px;
-    height: 35px;
-    writing-mode: vertical-lr;
-    font-size: 1.3rem;
-    color: rgb(255, 255, 255);
-    background: transparent;
-    border-radius: 5px;
-    padding-left: 2px;
-    visibility: visible;
-  }
-  /* #mypopover {
-    position: absolute;
-    margin: auto;
-    width: 330px;
-    height: 500px;
-    background: rgba(255, 255, 255, 0.055);
-    border: 1px solid #2c2c2c;
-    border-radius: 10px;
-    backdrop-filter: blur(15px);
-    visibility: visible;
-  } */
-}
+
+
 
 .mains{
     border-top-left-radius: 15px;
