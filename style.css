@@ -109,7 +109,6 @@ body{
 }
 [poptoggle]{
   position: fixed;
-  z-index: 20;
   right: 15px;
   bottom: 10px;
   width: 35px;
@@ -121,17 +120,6 @@ body{
   border-radius: 5px;
   padding-left: 2px;
   visibility: visible;
-}
-#mypopover {
-  position: absolute;
-  z-index: 20;
-  margin: auto;
-  width: 330px;
-  height: 500px;
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid #2c2c2c;
-  border-radius: 10px;
-  backdrop-filter: blur(15px);
 }
   .navbar{
     display: none;
