@@ -760,8 +760,8 @@ body{
   content: '';
   width: 328px;
   height: 448px;
-  background: rgba(0, 0, 0, 0.801);
-  backdrop-filter: blur(80px);
+  background: rgba(0, 0, 0, 0.751);
+  backdrop-filter: blur(70px);
   border-radius: 10px;
   position: absolute;
   top: 1px;
