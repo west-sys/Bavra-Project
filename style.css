@@ -3,6 +3,10 @@
 :root {
   --blue: #064789;
   --yellow: #c6b300;
+  /* media queries font size */
+  --header: 1.313rem;
+  --paragraph: 0.813rem;
+  --btnfont: 0.813rem;
 }
 body{
     margin: 0px;
@@ -723,11 +727,11 @@ body{
 }
  #parahead {
   color: white;
-  font-size: 20px;
+  font-size: var(--header);
 }
 #content2_paragraph {
   color: rgb(182, 182, 182);
-  font-size: 12px;
+  font-size: var(--paragraph);
 }
 .content2_button {
   height: 100px;
@@ -748,16 +752,16 @@ body{
   height: 40px;
   border: none;
   border-radius: 5px;
-  background: #c6b300;
+  background: var(--yellow);
   cursor: pointer;
 }
 #btn_ex a{
   color: black;
-  font-size: 13px;
+  font-size: var(--btnfont);
 }
 #btn_ac a{
   color: black;
-  font-size: 13px;
+  font-size: var(--btnfont);
 }
 }
 
@@ -874,7 +878,7 @@ body{
   height: 50px;
   border: none;
   border-radius: 5px;
-  background: #c6b300;
+  background: var(--yellow);
   cursor: pointer;
   transition: 0.5s;
 }
@@ -940,11 +944,11 @@ body{
   }
   #content4_paragraph {
     color: white;
-    font-size: 20px;
+    font-size: var(--header);
   }
   #content4_paragraph1 {
     color: rgb(182, 182, 182);
-    font-size: 12px;
+    font-size: var(--paragraph);
   }
   #content4_icon1 {
     text-align: center;
@@ -963,10 +967,10 @@ body{
     height: 40px;
   }
   #btn_b1 a {
-    font-family: 13px;
+    font-size: var(--btnfont);
   }
   #btn_b2 a {
-    font-family: 13px;
+    font-size: var(--btnfont);
   }
 }
 
@@ -983,52 +987,54 @@ body{
 #discription {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 150px;
     height: 250px;
   }
 #discrip_head {
-  text-align: center;
-  color: #c6b300;
+  text-align: left;
+  color: var(--yellow);
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
 }
-#com {
+#discription a {
   display: block;
   color: rgb(167, 166, 166);
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: var(--paragraph);
   font-weight: 500;
   text-decoration: none;
-  padding: 5px;
-  margin-left: 115px;
+  line-height: 22px;
 }
 @media (max-width: 600px) {
   .footers{
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .footer_data {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: 450px;
-    width: 350px;
+    width: 330px;
     margin: auto;
   }
 #discription {
     margin: auto;
     width: 150px;
-    height: 200px;
+    height: 220px;
   }
 #discrip_head {
-   text-align: center;
-   color: #c6b300;
+   text-align: left;
+   color: var(--yellow);
    font-family: 'Montserrat', sans-serif;
    font-size: 15px;
 }
 #discription a {
-   margin: auto;
-   padding: 2px;
-   text-align: justify;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--paragraph);
+  text-decoration: none;
+  text-align: left;
+  line-height: 22px;
 }
 }
 
