@@ -279,7 +279,7 @@ body{
   .content1{
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 30px;
   }
   .ball-sec {
     display: flex;
@@ -752,7 +752,7 @@ body{
  .content2_article {
   width: 330px;
   height: 450px;
-  background: linear-gradient(to top left, var(--blue),black, var(--yellow));
+  background: linear-gradient(to top left, var(--blue) 20%,black, var(--yellow));
   margin: auto;
   position: relative;
 }
