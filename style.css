@@ -355,13 +355,13 @@ body{
     align-items: center;
     margin-top: 80px;
 }
-#seam {
+#seamless {
     color: rgb(200, 200, 200);
     font-size: 50px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
-#on {
+#onboard {
     color: rgb(200, 200, 200);
     font-size: 50px;
     font-weight: 600;
@@ -656,25 +656,52 @@ body{
 }
 .content2_article {
   width: 500px;
+  height: 450px;
   margin-left: 50px;
+  background: linear-gradient(to top left, var(--blue),black, var(--yellow));
+  border-radius: 10px;
+  position: relative;
+}
+.content2_article::after{
+  content: '';
+  width: 498px;
+  height: 448px;
+  background: rgba(0, 0, 0, 0.801);
+  backdrop-filter: blur(80px);
+  border-radius: 10px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
 }
 #parahead {
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 27px;
   font-weight: 600;
+  position: absolute; 
+  left: 10px;
+  z-index: 2;
 }
 #content2_paragraph {
   color: rgb(182, 182, 182);
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 500;
+  line-height: 25px;
+  position: absolute; 
+  top: 130px;
+  left: 10px;
+  z-index: 2;
 }
 .content2_button {
-  height: 100px;
+  height: 55px;
+  width: 500px;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
+  position: absolute; 
+  z-index: 2;
+  top: 380px;
 }
 #btn_ex {
   width: 220px;
@@ -712,7 +739,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 900px;
+    height: 1000px;
     width: 350px;
     margin: auto;
  }
@@ -724,7 +751,21 @@ body{
   }
  .content2_article {
   width: 330px;
+  height: 450px;
+  background: linear-gradient(to top left, var(--blue),black, var(--yellow));
   margin: auto;
+  position: relative;
+}
+.content2_article::after{
+  content: '';
+  width: 328px;
+  height: 448px;
+  background: rgba(0, 0, 0, 0.801);
+  backdrop-filter: blur(80px);
+  border-radius: 10px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
 }
  #parahead {
   color: white;
@@ -732,13 +773,24 @@ body{
 }
 #content2_paragraph {
   color: rgb(182, 182, 182);
-  font-size: var(--paragraph);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  position: absolute; 
+  top: 105px;
+  left: 7px;
+  z-index: 2;
 }
 .content2_button {
-  height: 100px;
+  height: 55px;
+  width: 330px;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
+  position: absolute; 
+  z-index: 2;
+  top: 380px;
 }
 #btn_ex {
   width: 150px;
