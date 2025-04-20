@@ -161,16 +161,14 @@ body{
   border: 1px solid #2c2c2c;
   border-radius: 10px;
   backdrop-filter: blur(15px);
-  visibility: hidden;
 }
 #mypopover li a{
   text-decoration: none;
   color: white;
   font-family: 'Montserrat', sans-serif;
   line-height: 40px;
-  visibility: hidden;
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   [poptoggle]{
     position: fixed;
     right: 15px;
@@ -185,7 +183,7 @@ body{
     padding-left: 2px;
     visibility: visible;
   }
-  #mypopover {
+  /* #mypopover {
     position: absolute;
     margin: auto;
     width: 330px;
@@ -195,7 +193,7 @@ body{
     border-radius: 10px;
     backdrop-filter: blur(15px);
     visibility: visible;
-  }
+  } */
 }
 
 .mains{
