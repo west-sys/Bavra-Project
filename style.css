@@ -502,37 +502,38 @@ body{
   }
   @media (max-width: 600px) {
     .text-sec {
-      height: 150px;
-      width: 200px;
+      height: 200px;
+      width: 300px;
       display: block;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       margin: auto;
-  }
+    }
     [crypto_to_fiat]{
       display: flex;
       height: 40px;
-      width: 200px;
+      width: 280px;
     }
-    #seam {
+    #seamless {
       text-align: center;
+      color: rgb(200, 200, 200);
+      font-size: 1.875rem;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 10px;
+    }
+    #onboard {
+      text-align: center;
+      color: rgb(200, 200, 200);
+      font-size: 1.875rem;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+    }
+    #too {
       color: rgb(200, 200, 200);
       font-size: 25px;
       font-weight: 600;
       font-family: 'Montserrat', sans-serif;
-    }
-      #on {
-        text-align: center;
-        color: rgb(200, 200, 200);
-        font-size: 25px;
-        font-weight: 600;
-        font-family: 'Montserrat', sans-serif;
-      }
-      #too {
-        color: rgb(200, 200, 200);
-        font-size: 25px;
-        font-weight: 600;
-        font-family: 'Montserrat', sans-serif;
     }
     #glob{
       margin-top: 30px;
@@ -784,13 +785,13 @@ body{
   border-top-right-radius: 50px;
   background: linear-gradient(to left, var(--blue), rgb(0, 0, 0));
 }
-#arhead {
+#article_header {
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 35px;
 }
-#finan {
+#financial {
   color: #c6b300;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -807,21 +808,25 @@ body{
    display: none;
   }
   .content3_article {
+    display: flex;
+    align-items: center;
     width: 350px;
     height: 100px;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     background: linear-gradient(to left, var(--blue), rgb(0, 0, 0));
   }
-  #arhead {
+  #article_header {
+    width: 250px;
+    height: 70px;
     color: white;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
-  #finan {
+  #financial {
     color: var(--yellow);
     font-weight: 800;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
