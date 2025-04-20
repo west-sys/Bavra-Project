@@ -108,9 +108,9 @@ body{
     z-index: 10;
 }
 [poptoggle]{
-  /* position: fixed;
+  position: fixed;
   right: 15px;
-  bottom: 10px; */
+  bottom: 10px;
   width: 35px;
   height: 35px;
   writing-mode: vertical-lr;
