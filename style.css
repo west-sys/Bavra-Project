@@ -5,7 +5,7 @@
   --yellow: #c6b300;
   /* media queries font size */
   --header: 1.313rem;
-  --paragraph: 0.813rem;
+  --paragraph: 0.875rem;
   --btnfont: 0.813rem;
 }
 body{
@@ -64,7 +64,7 @@ body{
     background-color: rgba(158, 158, 158, 0.11);
 }
 .navbar ul li a:hover {
-  color: yellow;
+  color: var(--yellow);
 }
 [poptoggle]{
   position: fixed;
@@ -141,7 +141,7 @@ body{
   height: 35px;
   border: none;
   border-radius: 7px; 
-  background-color: #0d2cdb;
+  background-color: var(--blue);
   text-align: center;
 }
 .buy a {
@@ -490,6 +490,19 @@ body{
       left: 0;
     }
   }
+  .start_button{
+    width: 250px;
+    height: 40px;
+    margin-top: 10px;
+    background: var(--blue);
+    border: none;
+    border-radius: 10px;
+  }
+  .start_button a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+  }
   @media (max-width: 600px) {
     .text-sec {
       height: 200px;
@@ -553,6 +566,19 @@ body{
       position: relative;
       top: 0;
       animation: slider 12s steps(4) infinite;
+    }
+    .start_button{
+      width: 200px;
+      height: 40px;
+      margin-top: 20px;
+      background: var(--blue);
+      border: none;
+      border-radius: 7px;
+    }
+    .start_button a{
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
     }
   }
 
@@ -763,8 +789,8 @@ body{
 #content2_paragraph {
   color: rgb(182, 182, 182);
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--paragraph);
+  font-weight: 400;
   line-height: 22px;
   position: absolute; 
   top: 105px;
@@ -995,6 +1021,7 @@ body{
   #content4_paragraph1 {
     color: rgb(182, 182, 182);
     font-size: var(--paragraph);
+    font-weight: 400;
   }
   #content4_icon1 {
     text-align: center;
